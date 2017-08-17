@@ -43,6 +43,10 @@ class BookDetailViewController: UIViewController {
         self.bookDescriptionTextView.text = newBook.description
         
         
+        
+        self.navigationItem.title = newBook.title
+        
+        
         // Do any additional setup after loading the view.
     }
 
@@ -52,14 +56,20 @@ class BookDetailViewController: UIViewController {
     }
     
 
-    /*
+    
     // MARK: - Navigation
 
     // In a storyboard-based application, you will often want to do a little preparation before navigation
     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
         // Get the new view controller using segue.destinationViewController.
         // Pass the selected object to the new view controller.
+    
+        if let webVC = segue.destination as? WebViewController {
+            
+            webVC.shopURL = self.book?.url
+        }
+    
     }
-    */
+    
 
 }

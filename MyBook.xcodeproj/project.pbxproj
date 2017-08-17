@@ -16,6 +16,7 @@
 		E04D1A1D1F455013006F7294 /* BookListTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = E04D1A1C1F455013006F7294 /* BookListTableViewController.swift */; };
 		E04D1A1F1F455A55006F7294 /* Book.swift in Sources */ = {isa = PBXBuildFile; fileRef = E04D1A1E1F455A55006F7294 /* Book.swift */; };
 		E04D1A211F456336006F7294 /* BookDetailViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = E04D1A201F456336006F7294 /* BookDetailViewController.swift */; };
+		E04D1A231F456E75006F7294 /* WebViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = E04D1A221F456E75006F7294 /* WebViewController.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -30,6 +31,7 @@
 		E04D1A1C1F455013006F7294 /* BookListTableViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = BookListTableViewController.swift; sourceTree = "<group>"; };
 		E04D1A1E1F455A55006F7294 /* Book.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Book.swift; sourceTree = "<group>"; };
 		E04D1A201F456336006F7294 /* BookDetailViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = BookDetailViewController.swift; sourceTree = "<group>"; };
+		E04D1A221F456E75006F7294 /* WebViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = WebViewController.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -72,6 +74,7 @@
 				E04D1A1C1F455013006F7294 /* BookListTableViewController.swift */,
 				E04D1A1E1F455A55006F7294 /* Book.swift */,
 				E04D1A201F456336006F7294 /* BookDetailViewController.swift */,
+				E04D1A221F456E75006F7294 /* WebViewController.swift */,
 			);
 			path = MyBook;
 			sourceTree = "<group>";
@@ -153,6 +156,7 @@
 				E04D1A0B1F451E2F006F7294 /* ViewController.swift in Sources */,
 				E04D1A211F456336006F7294 /* BookDetailViewController.swift in Sources */,
 				E04D1A1D1F455013006F7294 /* BookListTableViewController.swift in Sources */,
+				E04D1A231F456E75006F7294 /* WebViewController.swift in Sources */,
 				E04D1A1F1F455A55006F7294 /* Book.swift in Sources */,
 				E04D1A091F451E2F006F7294 /* AppDelegate.swift in Sources */,
 			);

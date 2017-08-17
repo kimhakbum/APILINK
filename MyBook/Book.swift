@@ -20,10 +20,11 @@ class Book {
     var coverImage:UIImage
     var price:Int
     var description:String
+    var url:String
     
     
     
-    init(title:String,writer:String,publisher:String,coverImage:UIImage,price:Int,description:String)
+    init(title:String,writer:String,publisher:String,coverImage:UIImage,price:Int,description:String,url:String)
     {
         
         self.title = title
@@ -32,6 +33,7 @@ class Book {
         self.coverImage = coverImage
         self.price = price
         self.description = description
+        self.url = url
         
     }
 
