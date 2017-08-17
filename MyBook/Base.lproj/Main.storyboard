@@ -259,6 +259,13 @@
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                     </view>
                     <navigationItem key="navigationItem" title="Title" id="fh6-eq-Hh3"/>
+                    <connections>
+                        <outlet property="bookCoverImage" destination="hbq-7p-Y0v" id="LFY-Cs-UCb"/>
+                        <outlet property="bookDescriptionTextView" destination="L30-ag-y7C" id="aDD-r7-ppK"/>
+                        <outlet property="bookPriceLabel" destination="Fcd-yU-5ki" id="P0j-TP-ddi"/>
+                        <outlet property="bookPublisherLabel" destination="txr-aD-Qj8" id="dAM-rq-rtb"/>
+                        <outlet property="bookWriteLabel" destination="8ig-Kq-xoV" id="0av-fF-yyb"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="kun-f0-tud" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>

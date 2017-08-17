@@ -10,9 +10,39 @@ import UIKit
 
 class BookDetailViewController: UIViewController {
 
+    
+    var book:Book?
+    
+    
+    @IBOutlet weak var bookCoverImage: UIImageView!
+    
+    @IBOutlet weak var bookWriteLabel: UILabel!
+    
+    @IBOutlet weak var bookPublisherLabel: UILabel!
+    
+    @IBOutlet weak var bookPriceLabel: UILabel!
+    
+    @IBOutlet weak var bookDescriptionTextView: UITextView!
+    
+    
+    
+    
     override func viewDidLoad() {
         super.viewDidLoad()
 
+        
+        guard let newBook = self.book else{
+            
+            return
+        }
+        
+        self.bookCoverImage.image = newBook.coverImage
+        self.bookPublisherLabel.text = newBook.publisher
+        self.bookPriceLabel.text = String(newBook.price)
+        self.bookWriteLabel.text = newBook.writer
+        self.bookDescriptionTextView.text = newBook.description
+        
+        
         // Do any additional setup after loading the view.
     }
 
