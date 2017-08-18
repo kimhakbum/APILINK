@@ -14,17 +14,17 @@ import UIKit
 
 
 class Book {
-    var title:String
-    var writer:String
-    var publisher:String
-    var coverImage:UIImage
-    var price:Int
-    var description:String
-    var url:String
+    var title:String?
+    var writer:String?
+    var publisher:String?
+    var coverImage:UIImage?
+    var price:Int?
+    var description:String?
+    var url:String?
     
     
     
-    init(title:String,writer:String,publisher:String,coverImage:UIImage,price:Int,description:String,url:String)
+    init(title:String?,writer:String? = nil,publisher:String? = nil,coverImage:UIImage? = nil,price:Int? = nil,description:String? = nil,url:String? = nil)
     {
         
         self.title = title
@@ -36,5 +36,31 @@ class Book {
         self.url = url
         
     }
+    
+    
+   convenience init(title:String, writer:String)
+    {
+        
+        self.init(title: title, writer:writer)
+        
+        self.publisher = nil
+        self.coverImage = nil
+        self.price = nil
+        self.description = nil
+        self.url = nil
+    }
+    
+    
+    init(title:String, writer:String, publisher:String)
+    {
+        self.title = title
+        self.writer = writer
+        self.publisher = publisher
+        self.coverImage = nil
+        self.price = nil
+        self.description = nil
+        self.url = nil
+    }
+
 
 }

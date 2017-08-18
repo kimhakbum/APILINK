@@ -8,7 +8,7 @@
 
 import UIKit
 
-class BookListTableViewController: UITableViewController {
+class BookListTableViewController: UITableViewController, AddBookDelegate {
 
  
     
@@ -40,10 +40,17 @@ class BookListTableViewController: UITableViewController {
         let book4 = Book(title: "바깥은 여름", writer: "김애란", publisher: " 문학동네", coverImage: UIImage(named: "4")!
             , price: 11700, description: "김애란이 돌아왔다. 작가생활 15년간 끊임없이 자신을 경신해오며, 지금 우리가 발 딛고 서 있는 곳의 이야기를 우리의 언어로 들었을 때 느끼게 되는 친밀감과 반가움, 그 각별한 체험을 선사해온 저자가 《비행운》 이후 5년 만에 펴내는 신작 소설집 『바깥은 여름』. 제37회 이상문학상 수상작 《침묵의 미래》, 제8회 젊은작가상 수상작 《어디로 가고 싶으신가요》를 포함한 일곱 편의 작품들을 만나볼 수 있다.",url:"http://www.kyobobook.co.kr/product/detailViewKor.laf?mallGb=KOR&ejkGb=KOR&linkClass=0101&barcode=9788954646079")
         
+        let book5 = Book(title: "iPhone SDK 2", writer: nil, publisher: nil, coverImage: nil, price: nil, description: nil, url: nil)
+        
+   
+       
+        
         self.books.append(book1)
         self.books.append(book2)
         self.books.append(book3)
         self.books.append(book4)
+        self.books.append(book5)
+        
         
     }
 
@@ -77,6 +84,14 @@ class BookListTableViewController: UITableViewController {
 
         
 //        cell.textLabel?.text = books[indexPath.row]
+        
+        
+//        if let bookCell = cell  as? UITableViewCell
+//        {
+//            
+//        }
+        
+        
         
         
         let book = self.books[indexPath.row]
@@ -134,27 +149,45 @@ class BookListTableViewController: UITableViewController {
         // Get the new view controller using segue.destinationViewController.
         // Pass the selected object to the new view controller.
         
-        let cell = sender as? UITableViewCell
         
-        let vc = segue.destination as? BookDetailViewController
-        
-        
-        guard let selectCell = cell, let detailVC = vc else {
-         return
-        }
-        
-       if let idx = self.tableView.indexPath(for: selectCell) {
-            detailVC.book = self.books[idx.row]
-        }
-        
-        if let selCell = cell {
-           let cellIdx = self.tableView.indexPath(for: selCell)
+        if segue.identifier == "addvc" {
             
-            print(cellIdx?.row)
+            
+            if let addVC = segue.destination as? AddBookViewController {
+                
+                addVC.delegate = self
+            }
+            
+            
+        }else if segue.identifier == "detailvc" {
+        
+        
+            let cell = sender as? UITableViewCell
+        
+            let vc = segue.destination as? BookDetailViewController
+        
+        
+            guard let selectCell = cell, let detailVC = vc else {
+                return
+            }
+        
+            if let idx = self.tableView.indexPath(for: selectCell) {
+                detailVC.book = self.books[idx.row]
+            }
+        
+            if let selCell = cell {
+                let cellIdx = self.tableView.indexPath(for: selCell)
+         
+            }
+        
         }
-        
-        
     }
     
+    
+    func sendNewBook(book: Book) {
+        
+        self.books.append(book)
+        self.tableView.reloadData()
+    }
 
 }
