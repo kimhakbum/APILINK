@@ -10,6 +10,8 @@ import UIKit
 
 class BookListTableViewController: UITableViewController {
 
+ 
+    
     
     var books:[Book] = Array()
     
@@ -79,7 +81,7 @@ class BookListTableViewController: UITableViewController {
         
         let book = self.books[indexPath.row]
         
-        
+      
         cell.textLabel?.text = book.title
         cell.detailTextLabel?.text = book.writer
         cell.imageView?.image = book.coverImage
